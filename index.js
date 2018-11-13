@@ -18,7 +18,7 @@ App.use(bodyParser.json());
 router(App);
 
 // Server setup
-const port = process.env.PORT || 3090;
+const port = process.env.MONGOLAB_URI || 3090;
 const server = http.createServer(App);
 
 server.listen(port);
