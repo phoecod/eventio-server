@@ -20,7 +20,7 @@ router(App);
 // Server setup
 console.log(process.env);
 console.log(".......end......");
-const port = process.env.MONGO_PORT || 3090;
+const port = process.env.PORT || 3090;
 const server = http.createServer(App);
 
 server.listen(port);
