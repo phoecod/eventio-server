@@ -7,7 +7,7 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 
 mongoose.Promise = global.Promise;
-mongoose.connect(process.env.MONGOLAB_URI || 'mongodb://localhost:27017/', { useNewUrlParser: true });
+mongoose.connect(process.env.MONGOLAB_URI || 'mongodb://localhost:27017/eventio', { useNewUrlParser: true });
 mongoose.set('useCreateIndex', true);
 
 const App = express();
@@ -19,7 +19,8 @@ router(App);
 
 // Server setup
 console.log(process.env);
-const port = process.env.MONGOLAB_URI || 3090;
+console.log(".......end......");
+const port = process.env.MONGO_PORT || 3090;
 const server = http.createServer(App);
 
 server.listen(port);
