@@ -18,11 +18,9 @@ App.use(bodyParser.json());
 router(App);
 
 // Server setup
-console.log(process.env);
-console.log(".......end......");
-console.log(process.eventNames.PORT);
-console.log("end....PORT>>>>>>>")
-const port = process.env.PORT || 3090;
+console.log(process.env.PORT);
+console.log("<<<<<<<<<<ends....PORT>>>>>>>")
+const port = process.env.PORT || 5000;
 const server = http.createServer(App);
 
 server.listen(process.env.PORT);
