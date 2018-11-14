@@ -7,7 +7,8 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 
 mongoose.Promise = global.Promise;
-mongoose.connect(process.env.MONGOLAB_URI || 'mongodb://localhost:27017/eventio', { useNewUrlParser: true });
+const uri = mongodb://ragy:ragy@eventio-shard-00-00-b1hk3.mongodb.net:27017,eventio-shard-00-01-b1hk3.mongodb.net:27017,eventio-shard-00-02-b1hk3.mongodb.net:27017/test?ssl=true&replicaSet=eventio-shard-0&authSource=admin&retryWrites=true
+mongoose.connect( || 'mongodb://localhost:27017/eventio', { useNewUrlParser: true });
 mongoose.set('useCreateIndex', true);
 
 const App = express();
