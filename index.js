@@ -20,6 +20,7 @@ router(App);
 // Server setup
 
 console.log(process.env.PORT);
+console.log(process.env.MONGOLAB_URI);
 console.log("<<<<<<<<<<ends....PORT>>>>>>>")
 const port = process.env.PORT || 5000;
 const server = http.createServer(App);
