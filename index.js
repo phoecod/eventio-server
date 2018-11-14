@@ -20,9 +20,11 @@ router(App);
 // Server setup
 console.log(process.env);
 console.log(".......end......");
+console.log(process.eventNames.PORT);
+console.log("end....PORT>>>>>>>")
 const port = process.env.PORT || 3090;
 const server = http.createServer(App);
 
-server.listen(port);
+server.listen(process.env.PORT);
 
 console.log("server running on port " + port);
